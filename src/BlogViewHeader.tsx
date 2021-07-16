@@ -1,7 +1,12 @@
 import React from 'react';
 import { Navbar, NavbarBrand, Container } from 'reactstrap';
 
-const BlogViewHeader = ({ blogName, logo }) =>
+interface BlogViewHeaderProps {
+    blogName: string,
+    logo: string,
+}
+
+const BlogViewHeader = ({ blogName, logo }: BlogViewHeaderProps) =>
     <Navbar className="header navbar sticky-top navbar-dark bg-dark">
         <Container className="justify-content-center">
             <NavbarBrand href="#" style={{ fontFamily: 'Georgia', fontSize: 'xx-large' }}>

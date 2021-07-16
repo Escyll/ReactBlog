@@ -1,22 +1,24 @@
 import { makeAutoObservable } from 'mobx';
 import Logo from './Logo.png';
+import BlogPost from './BlogPost';
+import User from './User';
 
 export default class BlogStore {
     blogName = "Jesper's Blog";
-    posts = [];
-    users = [];
+    posts: BlogPost[] = [];
+    users: User[] = [];
     logo = Logo;
     constructor() {
         makeAutoObservable(this);
         this.fetchBlogPosts();
     }
-    updatePosts = posts => {
+    updatePosts = (posts: BlogPost[]) => {
         this.posts = posts;
     }
-    updateUsers = users => {
+    updateUsers = (users: User[]) => {
         this.users = users;
     }
-    selectPost = id => {
+    selectPost = (id: number) => {
         let post = this.posts.find(post => post.id === id);
         if (post) post.selected = !post.selected;
     }
@@ -30,9 +32,9 @@ export default class BlogStore {
     fetchBlogPosts = () => {
         this.fetchBlogPostsAsync()
             .then(({ posts, users }) => {
-                this.updatePosts(posts.map(post => ({
+                this.updatePosts(posts.map((post: BlogPost) => ({
                     id: post.id,
-                    user: users.find(user => user.id === post.userId),
+                    user: users.find((user: User) => user.id === post.userId),
                     title: post.title,
                     body: post.body,
                     selected: false,

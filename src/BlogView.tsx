@@ -1,11 +1,15 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Container, Row } from 'reactstrap';
 import { observer } from 'mobx-react-lite';
 import BlogViewHeader from './BlogViewHeader';
 import BlogCard from './BlogCard';
+import BlogStore from './BlogStore';
 
-const BlogView = observer(({ blogStore }) =>
+interface BlogViewProps {
+    blogStore: BlogStore,
+}
+
+const BlogView = observer(({ blogStore }: BlogViewProps) =>
     <div>
         <Helmet>
             <title>Jesper's Blog</title>
