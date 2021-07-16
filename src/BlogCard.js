@@ -14,7 +14,7 @@ const BlogCard = observer(({ blogPost }) =>
         <CardBody>
             <CardTitle tag="h5">{blogPost.title}</CardTitle>
             <CardSubtitle tag="h6">By {blogPost.user.name}</CardSubtitle>
-            <CardText style={{ marginTop: `20px` }}>By {blogPost.body}</CardText>
+            <CardText style={{ marginTop: `20px` }}>{blogPost.body}</CardText>
         </CardBody>
     </Card>
 );

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogCard 1`] = `
+<div
+  className="BlogCard card"
+>
+  <img
+    alt="abc"
+    className="card-img-top"
+    src="BlogPostImage.jpg"
+    width="100%"
+  />
+  <div
+    className="card-body"
+  >
+    <h5
+      className="card-title"
+    >
+      abc
+    </h5>
+    <h6
+      className="card-subtitle"
+    >
+      By 
+      ghi
+    </h6>
+    <p
+      className="card-text"
+      style={
+        Object {
+          "marginTop": "20px",
+        }
+      }
+    >
+      def
+    </p>
+  </div>
+</div>
+`;
+
+exports[`BlogCard selected 1`] = `
+<div
+  className="BlogCard border-2 border-primary card"
+>
+  <img
+    alt="abc"
+    className="card-img-top"
+    src="BlogPostImage.jpg"
+    width="100%"
+  />
+  <div
+    className="card-body"
+  >
+    <h5
+      className="card-title"
+    >
+      abc
+    </h5>
+    <h6
+      className="card-subtitle"
+    >
+      By 
+      ghi
+    </h6>
+    <p
+      className="card-text"
+      style={
+        Object {
+          "marginTop": "20px",
+        }
+      }
+    >
+      def
+    </p>
+  </div>
+</div>
+`;
